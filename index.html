@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Cards</title>
+    <link rel="stylesheet" href="./src/css.css">
+    <!-- This stylesheet contains the styles for the card layout and responsiveness -->
+</head>
+<body>
+
+
+    <div class="card-container">
+              <div class="section-header">
+        <hr class="left-hr">
+        <h4 class="highlight heading">YAY! It’s BOGO</h4>
+        <hr class="right-hr">
+    </div>
+    <div class="align">
+<div class="card expanded" onclick="toggleCard(this)"> 
+    
+    <div class="card-header">
+        <input type="radio" name="cardSelection" class="card-radio" checked>
+        <!-- <div class="strap">MOST POPULAR</div> Strap added here -->
+            <div class="flex-box">
+            <div class="item"><p>1 Unit<span class="offer">10% Off</span></p> 
+        <p class="description">Standard Price</p></div>
+            <div class="item"></div>
+           
+         </div>  <div class="outside-item">$10.00 USD<br><span class="text-cross-price">$24.00 USD </span>
+        </div>
+</div>
+  
+        <div class="card-content">
+            <div class="responsive">
+                <p style="margin-top: 3%;">#1</p>
+                <select name="size1">
+                    <option value="S">Size S</option>
+                    <option value="M">Size M</option>
+                    <option value="L">Size L</option>
+                </select>
+                <select name="color1">
+                    <option value="Red" disabled selected>Color</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                </select>
+            </div>
+             <div class="responsive">
+                <p style="margin-top: 3%;">#2</p>
+                <select name="size1">
+                    <option value="S">Size S</option>
+                    <option value="M">Size M</option>
+                    <option value="L">Size L</option>
+                </select>
+                <select name="color1">
+                    <option value="Red" disabled selected>Color</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                </select>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+        <div class="card-header">
+            <input type="radio" name="cardSelection" class="card-radio">
+            <div class="strap">MOST POPULAR</div> 
+            <div class="flex-box">
+            <div class="item"><p>2 Unit<span class="offer">20% Off</span></p> 
+        <p class="description">Standard Price</p></div>
+            <div class="item"></div>
+           </div>  
+           <div class="outside-item">$18.00 USD<br><span class="text-cross-price">$24.00 USD </span>
+           
+        </div>
+        </div>
+        <div class="card-content">
+             <div class="responsive">
+                <p style="margin-top: 3%;">#1</p>
+                <select name="size1">
+                    <option value="S">Size S</option>
+                    <option value="M">Size M</option>
+                    <option value="L">Size L</option>
+                </select>
+                <select name="color1">
+                    <option value="Red" disabled selected>Color</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                </select>
+            </div>
+             <div class="responsive">
+                <p style="margin-top: 3%;">#2</p>
+                <select name="size1">
+                    <option value="S">Size S</option>
+                    <option value="M">Size M</option>
+                    <option value="L">Size L</option>
+                </select>
+                <select name="color1">
+                    <option value="Red" disabled selected>Color</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                </select>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+        <div class="card-header">
+            <input type="radio" name="cardSelection" class="card-radio">
+            <div class="flex-box">
+            <div class="item"><p>3 Unit<span class="offer">30% Off</span></p> 
+        <p class="description">Standard Price</p></div>
+            <div class="item"></div>
+           </div>  <div class="outside-item">$24.00 USD<br><span class="text-cross-price">$24.00 USD </span></div>
+        </div>
+        <div class="card-content">
+             <div class="responsive">
+                <p style="margin-top: 3%;">#1</p>
+                <select name="size1">
+                    <option value="S">Size S</option>
+                    <option value="M">Size M</option>
+                    <option value="L">Size L</option>
+                </select>
+                <select name="color1">
+                    <option value="Red" disabled selected>Color</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                </select>
+            </div>
+             <div class="responsive">
+                <p style="margin-top: 3%;">#2</p>
+                <select name="size1">
+                    <option value="S">Size S</option>
+                    <option value="M">Size M</option>
+                    <option value="L">Size L</option>
+                </select>
+                <select name="color1">
+                    <option value="Red" disabled selected>Color</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                </select>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+        <div class="info">
+            <span class="shipping">Free 2 Day Shipping</span>
+            <span class="total">Total : $18.00 USD </span>
+        </div>
+        <button class="addtocart">+ Add to Cart</button>
+        <div class="outside-left"><p>Powered by Pumper</p></div>
+    </div>
+
+
+    <script src="./src/script.js"> </script>
+    <!-- This script contains the JavaScript logic for toggling cards -->
+</body>
+</html>

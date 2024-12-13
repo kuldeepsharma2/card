@@ -1,0 +1,336 @@
+* {
+    margin: 0px 0px 8px 4px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.card-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: #fff;
+    cursor: pointer;
+    width: 100%; /* Ensures the card takes up full width of container */
+    transition: box-shadow 0.3s ease;
+    display: flex; /* Added for flex layout */
+    flex-direction: column; /* Keeps header and content in column */
+    gap: 10px;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    display: flex;
+    justify-content: start; /* Ensures alignment */
+    align-items: center;
+    font-weight: bold;
+}
+
+.card-content {
+    display: none;
+    margin-top: 10px;
+}
+
+.card.expanded .card-content {
+    display: block;
+}
+
+.card.expanded {
+    
+
+    border: 2px solid #FF6B82; /* Dark green border */
+    background-color: #FFF9FA; /* Light green shade */
+    color: #000000; /* Text color matches border */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+}
+
+.responsive {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+
+.responsive select {
+   width: 20%;
+    height: 33px !important;
+    padding: 3px;
+}
+
+@media (max-width: 480px) {
+    .responsive {
+        flex-direction: column;
+    }
+
+    .responsive select {
+        width: 100%;
+    }
+}
+
+.footer {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.highlight {
+    color: #FF6B82;
+}
+
+.highlightb {
+    color: black;
+}
+
+/* Section Header */
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.section-header h4{
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;}
+.section-header .left-hr,
+.section-header .right-hr {
+    flex: 1;
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, #a3a3a3, transparent);
+}
+
+.section-header .right-hr {
+    background: linear-gradient(to left, #a3a3a3, transparent);
+}
+
+.section-header .section-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    padding: 0 10px;
+    white-space: nowrap;
+}
+
+/* New styles for container and items */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc; /* Optional for visualization */
+    padding: 10px;
+    width: 100%; /* Ensures the container spans full width */
+    gap: 10px;
+}
+
+.flex-box {
+    display: flex;
+    gap: 10px; /* Space between items in the flex-box */
+}
+
+.item {
+    font-size: 16px; /* Adjust as needed */
+}
+
+.outside-item {
+    
+    font-weight: bold;
+    align-self: baseline; /* Ensures alignment with the flex container */
+    margin-left: auto; /* Pushes the outside item to the far right */
+}
+.outside-left {
+    align-self: flex-start; /* Aligns this specific item to the left */
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+}
+
+.info .shipping {
+    color: #FF6B82; /* Green color for shipping text */
+    font-weight: bold;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+.info .total b {
+    color: #000; /* Bold total amount */
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+.addtocart {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF6B82;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.addtocart:hover {
+    background-color: #FF6B82; /* Darker green on hover */
+}
+.outside-item.favorite {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-end; /* Align items at the end (right side) */
+    align-items: flex-end; /* Align items horizontally at the right */
+    
+}
+
+.outside-left {
+    text-align: right; /* Ensure text is aligned to the right */
+    width: 100%;
+}
+p{
+    color: #000;
+}
+.card-header .flex-box .item span
+{
+    width: 44px;
+height: 15px;
+top: 104px;
+left: 162px;
+gap: 0px;
+opacity: 0px;
+
+}
+.card-header .flex-box .item span.offer{
+  font-family: Inter;
+font-size: 12px;
+font-weight: 400;
+line-height: 14.52px;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+background: #FF6B82;
+padding: 3px;
+color: #fff;
+margin-left: 10px;
+border-radius: 1px;
+}
+.description{
+font-family: Inter;
+font-size: 12px;
+font-weight: 400;
+line-height: 14.52px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+.text-cross-price{
+font-family: Inter;
+font-size: 10px;
+font-weight: 400;
+line-height: 12.1px;
+text-align: left;
+text-decoration-line: line-through;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+margin: 0;
+}
+ .strap {
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    background: #FF6B82;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-align: center;
+    z-index: 10;
+}
+.strap::before,
+.strap::after {
+    content: '';
+    position: absolute;
+    width: 10px; /* Adjust for fold size */
+    height: 10px; /* Adjust for fold size */
+    background: #ff6b8100; /* Fold color */
+    z-index: -1; /* Send behind the ribbon text */
+}
+
+ .strap::before {
+    inset: 0 0 auto auto;
+    transform-origin: 0 0;
+    transform: translate(29.3%) rotate(272deg);
+    --f: 10px;
+    --r: 103px;
+    --t: 13px;
+    position: absolute;
+    inset: var(--t) calc(-1* var(--f)) auto auto;
+    /* padding: 0 10px var(--f) calc(10px + var(--r)); */
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--f)), calc(100% - var(--f)) 100%, calc(100% - var(--f)) calc(100% - var(--f)), 0 calc(100% - var(--f)), var(--r) calc(50% - var(--f) / 45));
+    background: #D7445B;
+    right: -5px;
+    box-shadow: 0 calc(-1* var(--f)) 0 inset #0005;
+    height: 11px;
+}
+
+.strap::after {
+     inset: 0 0 auto auto;
+    transform-origin: 0 0;
+    transform: translate(29.3%) rotate(179deg);
+    --f: 11px;
+    --r: 103px;
+    --t: 13px;
+    position: absolute;
+    inset: var(--t) calc(-1* var(--f)) auto auto;
+    /* padding: 0 10px var(--f) calc(10px + var(--r)); */
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--f)), calc(100% - var(--f)) 100%, calc(100% - var(--f)) calc(100% - var(--f)), 0 calc(100% - var(--f)), var(--r) calc(63% - var(--f) / 45));
+    background: #D7445B;
+    left: -2px;
+    box-shadow: 0 calc(-1* var(--f)) 0 inset #0005;
+    height: 12px;
+
+}
+
+.card {
+    position: relative; /* Needed for the strap positioning */
+}
